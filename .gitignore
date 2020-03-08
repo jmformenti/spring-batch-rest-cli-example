@@ -1,12 +1,7 @@
-/.attach_pid*
 /.classpath
 /.project
-/.factorypath
 /.settings/
-/carabassa-*/.classpath
-/carabassa-*/.project
-/carabassa-*/.factorypath
-/carabassa-*/.attach_pid*
-/carabassa-*/.settings/
-/carabassa-*/target/
-/carabassa-cli/log
+/batch-*/.classpath
+/batch-*/.project
+/batch-*/.settings/
+/batch-*/target/

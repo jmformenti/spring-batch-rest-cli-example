@@ -1,6 +1,6 @@
 # spring-batch-rest-cli-example
 
-This is an example how you implement a Spring batch job once and execute it via command line or REST Api without any change in source code.
+This is an example how you implement a Spring batch job once and execute it via command line or REST Api without any change in job source code.
 
 ## modules
 
