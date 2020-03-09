@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import com.github.chrisgleissner.springbatchrest.util.adhoc.JobBuilder;
+import com.github.chrisgleissner.springbatchrest.util.core.JobBuilder;
 
 import lombok.extern.slf4j.Slf4j;
 

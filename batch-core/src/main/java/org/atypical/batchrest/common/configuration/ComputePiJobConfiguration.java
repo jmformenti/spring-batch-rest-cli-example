@@ -19,8 +19,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @Configuration
 @Slf4j
-// TODO subselect no acepta h-schema
-//      jobparameter siempre string en spring-batch-rest
 public class ComputePiJobConfiguration {
 	static final String JOB_NAME = "computePi";
 	static final String PARAM_COUNT = "count";

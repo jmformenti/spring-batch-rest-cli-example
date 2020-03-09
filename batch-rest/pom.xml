@@ -10,7 +10,7 @@
 	<artifactId>batch-rest</artifactId>
 
 	<properties>
-		<spring.batch.rest.version>1.3.0</spring.batch.rest.version>
+		<spring.batch.rest.version>1.4.0</spring.batch.rest.version>
 	</properties>
 
 	<dependencies>
