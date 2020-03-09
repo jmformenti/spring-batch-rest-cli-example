@@ -1,4 +1,4 @@
-package org.atypical.batchrest.api.listener;
+package org.atypical.batch.api.listener;
 
 import java.util.List;
 

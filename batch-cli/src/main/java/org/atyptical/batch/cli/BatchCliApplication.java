@@ -1,4 +1,4 @@
-package org.atyptical.batchrest.cli;
+package org.atyptical.batch.cli;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameters;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableBatchProcessing
-@ComponentScan("org.atypical.batchrest.common.configuration")
+@ComponentScan("org.atypical.batch.core.configuration")
 public class BatchCliApplication implements CommandLineRunner {
 
 	@Autowired
@@ -28,7 +28,7 @@ public class BatchCliApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		JobParameters params = new JobParametersBuilder().addString("count", "1000000").toJobParameters();
+		JobParameters params = new JobParametersBuilder().addLong("count", 1000000L).toJobParameters();
 		jobLauncher.run(computePiJob, params);
 	}
 }

@@ -1,7 +1,8 @@
-package org.atypical.batchrest.common.configuration;
+package org.atypical.batch.core.configuration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.atypical.batch.core.configuration.ComputePiJobConfiguration;
 import org.junit.After;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -46,7 +47,7 @@ class ComputePiJobConfigurationTest {
 
 	private JobParameters defaultJobParameters() {
 		JobParametersBuilder paramsBuilder = new JobParametersBuilder();
-		paramsBuilder.addString(ComputePiJobConfiguration.PARAM_COUNT, "1000000");
+		paramsBuilder.addLong(ComputePiJobConfiguration.PARAM_COUNT, 1000000L);
 		return paramsBuilder.toJobParameters();
 	}
 

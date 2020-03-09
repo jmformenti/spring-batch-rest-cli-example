@@ -1,4 +1,4 @@
-package org.atypical.batchrest.api;
+package org.atypical.batch.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -5,3 +5,4 @@
 /batch-*/.project
 /batch-*/.settings/
 /batch-*/target/
+/batch-*/.attach_pid*

@@ -1,4 +1,4 @@
-package org.atypical.batchrest.common.configuration;
+package org.atypical.batch.core.configuration;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -20,8 +20,8 @@ import lombok.extern.slf4j.Slf4j;
 @Configuration
 @Slf4j
 public class ComputePiJobConfiguration {
-	static final String JOB_NAME = "computePi";
-	static final String PARAM_COUNT = "count";
+	public static final String JOB_NAME = "computePi";
+	public static final String PARAM_COUNT = "count";
 
 	@Autowired
 	JobBuilderFactory jobBuilderFactory;
@@ -42,14 +42,14 @@ public class ComputePiJobConfiguration {
 
 	@Bean
 	@StepScope
-	Tasklet computePiTasklet(@Value("#{jobParameters['count']}") String count) {
-		return new ComputePiTasklet(Long.valueOf(count).intValue());
+	Tasklet computePiTasklet(@Value("#{jobParameters['count']}") Long count) {
+		return new ComputePiTasklet(count);
 	}
 
 	private class ComputePiTasklet implements Tasklet {
-		int count;
+		long count;
 
-		public ComputePiTasklet(int count) {
+		public ComputePiTasklet(long count) {
 			this.count = count;
 		}
 
@@ -60,7 +60,7 @@ public class ComputePiJobConfiguration {
 			return RepeatStatus.FINISHED;
 		}
 
-		private double computePi(int count) {
+		private double computePi(long count) {
 			double pi = 1;
 
 			for (int i = 3; i < count; i += 4) {
